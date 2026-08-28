@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity } from './CartSlice';
 import './CartItem.css';
 
-function CartItem({ onContinueShopping }) {
+function CartItem({ onContinueShopping, onCheckoutClick }) {
   const cartItems = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
 
@@ -49,7 +49,10 @@ function CartItem({ onContinueShopping }) {
   };
 
   const handleCheckoutClick = (e) => {
-    alert('Functionality to be added in future updates!');
+    e.preventDefault();
+    if (onCheckoutClick) {
+      onCheckoutClick();
+    }
   };
 
   return (

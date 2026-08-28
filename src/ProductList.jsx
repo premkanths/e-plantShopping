@@ -1,184 +1,193 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem } from './CartSlice';
-import CartItem from './CartItem';
-import AboutUs from './AboutUs';
+import { toggleWishlist } from './userSlice';
+import ProductQuickView from './ProductQuickView';
 import './ProductList.css';
 
-function ProductList() {
-  const [showCart, setShowCart] = useState(false);
-  const [showAbout, setShowAbout] = useState(false);
-  const cartItems = useSelector(state => state.cart.items);
+function ProductList({ onAddToCartClick }) {
   const dispatch = useDispatch();
+  
+  // Fetch products from catalog slice (updated by Admin CRUD)
+  const catalogItems = useSelector(state => state.catalog.items);
+  const cartItems = useSelector(state => state.cart.items);
+  const wishlist = useSelector(state => state.user.wishlist);
 
-  const totalItemsCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  // Search & Filter state
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortOrder, setSortOrder] = useState('default');
+  const [selectedPlantForQuickView, setSelectedPlantForQuickView] = useState(null);
 
-  const plantsArray = [
-    {
-      category: "Air Purifying Plants",
-      plants: [
-        {
-          name: "Snake Plant",
-          image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=600&auto=format&fit=crop",
-          description: "Produces oxygen at night, perfect for your bedroom.",
-          cost: "$15"
-        },
-        {
-          name: "Spider Plant",
-          image: "https://images.unsplash.com/photo-1572656631137-7935297eff55?q=80&w=600&auto=format&fit=crop",
-          description: "Highly effective at filtering indoor air toxins.",
-          cost: "$12"
-        },
-        {
-          name: "Peace Lily",
-          image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?q=80&w=600&auto=format&fit=crop",
-          description: "Stunning white blooms that filter harmful chemicals.",
-          cost: "$18"
-        }
-      ]
-    },
-    {
-      category: "Aromatic Fragrant Plants",
-      plants: [
-        {
-          name: "Lavender",
-          image: "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?q=80&w=600&auto=format&fit=crop",
-          description: "Calming scent that reduces stress and improves sleep.",
-          cost: "$20"
-        },
-        {
-          name: "Jasmine",
-          image: "https://images.unsplash.com/photo-1508780709619-79562169bc51?q=80&w=600&auto=format&fit=crop",
-          description: "Sweet fragrance that uplifts mood and relieves anxiety.",
-          cost: "$22"
-        },
-        {
-          name: "Rosemary",
-          image: "https://images.unsplash.com/photo-1588610052317-02058b87ce2d?q=80&w=600&auto=format&fit=crop",
-          description: "Delicious culinary herb with a fresh, piney aroma.",
-          cost: "$10"
-        }
-      ]
-    },
-    {
-      category: "Low Maintenance Plants",
-      plants: [
-        {
-          name: "Aloe Vera",
-          image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop",
-          description: "Requires very little watering; contains soothing gel.",
-          cost: "$14"
-        },
-        {
-          name: "Cast Iron Plant",
-          image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=600&auto=format&fit=crop",
-          description: "Extremely hardy, thrives in low light and neglect.",
-          cost: "$25"
-        },
-        {
-          name: "ZZ Plant",
-          image: "https://images.unsplash.com/photo-1632207691143-643c2a9a9361?q=80&w=600&auto=format&fit=crop",
-          description: "Waxy, shiny leaves that store water for dry periods.",
-          cost: "$19"
-        }
-      ]
-    }
-  ];
+  // Extract categories dynamically
+  const categories = ['All', ...new Set(catalogItems.map(item => item.category))];
 
   const handleAddToCart = (plant) => {
     dispatch(addItem(plant));
+    if (onAddToCartClick) {
+      onAddToCartClick(plant.name);
+    }
   };
 
-  const handleCartClick = (e) => {
-    e.preventDefault();
-    setShowCart(true);
-    setShowAbout(false);
+  const handleWishlistToggle = (plantName) => {
+    dispatch(toggleWishlist(plantName));
   };
 
-  const handleAboutClick = (e) => {
-    e.preventDefault();
-    setShowAbout(true);
-    setShowCart(false);
-  };
+  // Convert cost "$15" -> 15.0
+  const parseCost = (costStr) => parseFloat(costStr.replace('$', ''));
 
-  const handlePlantsClick = (e) => {
-    e.preventDefault();
-    setShowCart(false);
-    setShowAbout(false);
-  };
+  // Filter and sort products
+  let processedItems = [...catalogItems];
 
-  const handleContinueShopping = () => {
-    setShowCart(false);
-    setShowAbout(false);
-  };
+  // 1. Search Query Filter
+  if (searchQuery.trim() !== '') {
+    processedItems = processedItems.filter(plant => 
+      plant.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      plant.description.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }
+
+  // 2. Category Filter
+  if (selectedCategory !== 'All') {
+    processedItems = processedItems.filter(plant => plant.category === selectedCategory);
+  }
+
+  // 3. Sorting
+  if (sortOrder === 'price-low') {
+    processedItems.sort((a, b) => parseCost(a.cost) - parseCost(b.cost));
+  } else if (sortOrder === 'price-high') {
+    processedItems.sort((a, b) => parseCost(b.cost) - parseCost(a.cost));
+  } else if (sortOrder === 'rating') {
+    processedItems.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  } else if (sortOrder === 'alphabetical') {
+    processedItems.sort((a, b) => a.name.localeCompare(b.name));
+  }
 
   return (
-    <div className="product-list-container">
-      <nav className="navbar">
-        <div className="nav-logo" onClick={handlePlantsClick}>
-          <span className="logo-icon">🌿</span>
-          <div>
-            <strong>Paradise Nursery</strong>
-            <span style={{ fontSize: '0.8rem', display: 'block', fontWeight: 'normal', color: '#c8e6c9' }}>
-              Green is Serenity
-            </span>
-          </div>
-        </div>
-        <div className="nav-links">
-          <a href="#" className="nav-link-item" onClick={handlePlantsClick}>Plants</a>
-          <a href="#" className="nav-link-item" onClick={handleAboutClick}>About Us</a>
-          <div className="cart-icon-container" onClick={handleCartClick}>
-            <a href="#" className="nav-link-item">
-              <span className="cart-icon">🛒</span>
-              {totalItemsCount > 0 && <span className="cart-badge">{totalItemsCount}</span>}
-            </a>
-          </div>
-        </div>
-      </nav>
+    <div className="catalog-container animate-fade-in">
+      <div className="catalog-header">
+        <h2>Our Beautiful Plant Collection</h2>
+        <p>Select your favorite companions to bring fresh air, gorgeous fragrance, and positive vibes to your living space.</p>
+      </div>
 
-      {showCart ? (
-        <CartItem onContinueShopping={handleContinueShopping} />
-      ) : showAbout ? (
-        <div className="container" style={{ padding: '40px 20px', maxWidth: '800px', margin: '0 auto' }}>
-          <AboutUs />
+      {/* Filter and Search controls bar */}
+      <div className="catalogue-filters-bar">
+        {/* Search */}
+        <div className="search-wrapper-co">
+          <svg className="search-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            className="search-input-co"
+            placeholder="Search plants by name..." 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
         </div>
-      ) : (
-        <div className="catalog-container">
-          <div className="catalog-header">
-            <h2>Our Beautiful Plant Collection</h2>
-            <p>Select your favorite companions to bring fresh air and positive vibes to your living space.</p>
-          </div>
 
-          {plantsArray.map((categoryGroup, index) => (
-            <div key={index} className="category-section">
-              <h3 className="category-title">{categoryGroup.category}</h3>
-              <div className="plants-grid">
-                {categoryGroup.plants.map((plant, pIndex) => {
-                  const isInCart = cartItems.some(item => item.name === plant.name);
-                  return (
-                    <div key={pIndex} className="plant-card">
-                      <div className="plant-img-container">
-                        <img src={plant.image} alt={plant.name} className="plant-image" />
-                      </div>
-                      <div className="plant-details">
-                        <h4 className="plant-name">{plant.name}</h4>
-                        <p className="plant-price">{plant.cost}</p>
-                        <p className="plant-desc">{plant.description}</p>
-                        <button
-                          className={`add-to-cart-btn ${isInCart ? 'added' : ''}`}
-                          onClick={() => handleAddToCart(plant)}
-                          disabled={isInCart}
-                        >
-                          {isInCart ? 'Added to Cart' : 'Add to Cart'}
-                        </button>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+        {/* Categories */}
+        <div className="category-tabs-co">
+          {categories.map((cat, idx) => (
+            <button 
+              key={idx} 
+              className={`category-chip-btn ${selectedCategory === cat ? 'active' : ''}`}
+              onClick={() => setSelectedCategory(cat)}
+            >
+              {cat}
+            </button>
           ))}
         </div>
+
+        {/* Sorting dropdown */}
+        <div className="sort-wrapper-co">
+          <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
+            <option value="default">Sort: Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Rating: High to Low</option>
+            <option value="alphabetical">Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+
+      {/* Grid List */}
+      {processedItems.length === 0 ? (
+        <div className="catalog-empty-state">
+          <h3>No Plants Found</h3>
+          <p>We couldn't find any products matching your criteria. Try adjusting your search query or filters.</p>
+          <button 
+            className="clear-search-btn" 
+            onClick={() => { setSearchQuery(''); setSelectedCategory('All'); setSortOrder('default'); }}
+          >
+            Clear Filters & Search
+          </button>
+        </div>
+      ) : (
+        <div className="plants-grid">
+          {processedItems.map((plant, index) => {
+            const isInCart = cartItems.some(item => item.name === plant.name);
+            const isWishlisted = wishlist.includes(plant.name);
+
+            return (
+              <div key={index} className="plant-card">
+                {/* Floating Heart Button */}
+                <button 
+                  className={`wishlist-btn-catalog ${isWishlisted ? 'active' : ''}`}
+                  onClick={() => handleWishlistToggle(plant.name)}
+                  title={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+
+                <div className="plant-img-container">
+                  <img src={plant.image} alt={plant.name} className="plant-image" />
+                </div>
+
+                <div className="plant-details">
+                  <div className="plant-card-meta-row">
+                    <h3 className="plant-name">{plant.name}</h3>
+                    <span className="plant-price">{plant.cost}</span>
+                  </div>
+
+                  <div className="plant-rating-catalog">
+                    <span className="star-icon-catalog">★</span>
+                    <span>{plant.rating || '4.5'}</span>
+                  </div>
+
+                  <p className="plant-desc">{plant.description}</p>
+
+                  <div className="plant-card-actions">
+                    <button
+                      className={`add-to-cart-btn ${isInCart ? 'added' : ''}`}
+                      onClick={() => handleAddToCart(plant)}
+                      disabled={isInCart}
+                    >
+                      {isInCart ? 'Added to Cart' : 'Add to Cart'}
+                    </button>
+                    <button 
+                      className="quick-view-btn"
+                      onClick={() => setSelectedPlantForQuickView(plant)}
+                    >
+                      Care Info
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* QUICK VIEW MODAL RENDERING */}
+      {selectedPlantForQuickView && (
+        <ProductQuickView 
+          plant={selectedPlantForQuickView} 
+          onClose={() => setSelectedPlantForQuickView(null)} 
+        />
       )}
     </div>
   );
