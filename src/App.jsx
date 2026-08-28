@@ -61,7 +61,7 @@ function App() {
 
   const handleGetStartedClick = () => {
     setShowProductList(true);
-    setCurrentView(isAuthenticated ? 'catalog' : 'login');
+    setCurrentView('catalog');
     showToast("Welcome to Paradise Nursery!");
   };
 
