@@ -5,12 +5,24 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import store from './store';
 import App from './App';
 
+const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
+const isGoogleConfigured = googleClientId && googleClientId !== 'your-google-client-id.apps.googleusercontent.com';
+
+const AppWrapper = () => {
+  if (isGoogleConfigured) {
+    return (
+      <GoogleOAuthProvider clientId={googleClientId}>
+        <App />
+      </GoogleOAuthProvider>
+    );
+  }
+  return <App />;
+};
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID || ""}>
-        <App />
-      </GoogleOAuthProvider>
+      <AppWrapper />
     </Provider>
   </React.StrictMode>
 );

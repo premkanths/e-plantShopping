@@ -163,14 +163,25 @@ function Login({ onLoginSuccess }) {
         </div>
 
         <div className="social-login-container">
-          <GoogleLogin
-            onSuccess={handleGoogleSuccess}
-            onError={() => setLocalError('Google login verification failed.')}
-            theme="outline"
-            shape="pill"
-            text="signin_with"
-            width="100%"
-          />
+          {import.meta.env.VITE_GOOGLE_CLIENT_ID && import.meta.env.VITE_GOOGLE_CLIENT_ID !== 'your-google-client-id.apps.googleusercontent.com' ? (
+            <GoogleLogin
+              onSuccess={handleGoogleSuccess}
+              onError={() => setLocalError('Google login verification failed.')}
+              theme="outline"
+              shape="pill"
+              text="signin_with"
+              width="100%"
+            />
+          ) : (
+            <button 
+              type="button" 
+              className="google-disabled-btn" 
+              title="Add VITE_GOOGLE_CLIENT_ID to .env to enable"
+              onClick={() => setLocalError('Google Sign-In is not configured yet. Configure VITE_GOOGLE_CLIENT_ID in your .env or use Showcase Guest Access.')}
+            >
+              <span className="google-icon-disabled">G</span> Sign in with Google (Not Configured)
+            </button>
+          )}
         </div>
 
         <div className="guest-login-divider">
