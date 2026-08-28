@@ -366,9 +366,10 @@ app.get('/api/orders', authenticateToken, async (req, res) => {
 app.post('/api/orders', authenticateToken, async (req, res) => {
   try {
     const db = await getDb();
-    const { customerName, customerEmail, customerPhone, shippingAddress, items, totalCost } = req.body;
+    const { customerName, customerEmail, customerPhone, shippingAddress, items, totalCost, totalAmount } = req.body;
+    const finalTotal = totalCost !== undefined ? totalCost : totalAmount;
 
-    if (!customerName || !customerEmail || !items || !totalCost) {
+    if (!customerName || !customerEmail || !items || finalTotal === undefined) {
       return res.status(400).json({ error: 'Missing required order fields' });
     }
 
@@ -388,7 +389,7 @@ app.post('/api/orders', authenticateToken, async (req, res) => {
         customerPhone || '',
         JSON.stringify(shippingAddress || {}),
         JSON.stringify(items),
-        totalCost
+        finalTotal
       ]
     );
 

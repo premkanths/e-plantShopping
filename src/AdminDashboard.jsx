@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addProduct, updateProduct, deleteProduct, resetCatalog } from './catalogSlice';
-import { updateOrderStatus } from './orderSlice';
+import { updateOrderStatus, fetchOrders } from './orderSlice';
 import './AdminDashboard.css';
 
 function AdminDashboard() {
   const dispatch = useDispatch();
   const catalog = useSelector(state => state.catalog.items);
   const orders = useSelector(state => state.orders.items);
+
+  useEffect(() => {
+    dispatch(fetchOrders());
+  }, [dispatch]);
 
   const [activeTab, setActiveTab] = useState('analytics'); // 'analytics', 'inventory', 'orders'
   
