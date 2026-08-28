@@ -1,0 +1,231 @@
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  background: linear-gradient(135deg, #eef7f2 0%, #d8edd6 100%);
+  padding: 40px 20px;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-logo-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-header h2 {
+  font-family: 'Playfair Display', serif;
+  color: #1e3f20;
+  margin: 0 0 4px 0;
+  font-size: 28px;
+}
+
+.login-header p {
+  color: #6d8270;
+  margin: 0;
+  font-size: 14px;
+}
+
+.login-tabs {
+  display: flex;
+  border-bottom: 2px solid #eef2ef;
+  margin-bottom: 25px;
+}
+
+.tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8fa093;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  text-align: center;
+}
+
+.tab-btn.active {
+  color: #4caf50;
+  border-bottom: 2px solid #4caf50;
+  margin-bottom: -2px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4f6153;
+  text-align: left;
+}
+
+.form-group input {
+  padding: 12px 16px;
+  border: 1.5px solid #d3dfd6;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #4caf50;
+  background-color: #fbfdfc;
+}
+
+.login-error-alert {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: left;
+  border: 1px solid #ffcdd2;
+}
+
+.login-submit-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+
+.login-submit-btn:hover:not(:disabled) {
+  background-color: #3e8e41;
+}
+
+.login-submit-btn:disabled {
+  background-color: #a8d5aa;
+  cursor: not-allowed;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #8fa093;
+  font-size: 12px;
+  margin: 25px 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1.5px solid #eef2ef;
+}
+
+.login-divider:not(:empty)::before {
+  margin-right: 12px;
+}
+
+.login-divider:not(:empty)::after {
+  margin-left: 12px;
+}
+
+.social-login-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.guest-login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #8fa093;
+  font-size: 12px;
+  margin: 20px 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.guest-login-divider::before,
+.guest-login-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1.5px solid #eef2ef;
+}
+
+.guest-login-divider:not(:empty)::before {
+  margin-right: 12px;
+}
+
+.guest-login-divider:not(:empty)::after {
+  margin-left: 12px;
+}
+
+.guest-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guest-btn {
+  background: white;
+  border: 1.5px solid #d3dfd6;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.guest-customer-btn {
+  color: #2e7d32;
+  border-color: #a5d6a7;
+  background-color: #f1f8e9;
+}
+
+.guest-customer-btn:hover {
+  background-color: #e8f5e9;
+  border-color: #81c784;
+}
+
+.guest-admin-btn {
+  color: #c62828;
+  border-color: #ffcdd2;
+  background-color: #ffebee;
+}
+
+.guest-admin-btn:hover {
+  background-color: #ffdee2;
+  border-color: #ef9a9a;
+}

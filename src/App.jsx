@@ -1,24 +1,50 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setRole } from './userSlice';
+import { fetchUserProfile } from './userSlice';
+import { fetchPlants } from './catalogSlice';
+import { fetchOrders } from './orderSlice';
+import { fetchCurrentUser, logoutUser } from './authSlice';
 import ProductList from './ProductList';
 import CartItem from './CartItem';
 import Checkout from './Checkout';
 import UserProfile from './UserProfile';
 import AdminDashboard from './AdminDashboard';
 import AboutUs from './AboutUs';
+import Login from './Login';
 import './App.css';
 
 function App() {
   const dispatch = useDispatch();
   const [showProductList, setShowProductList] = useState(false);
-  const [currentView, setCurrentView] = useState('catalog'); // 'catalog', 'about', 'cart', 'checkout', 'profile', 'admin'
+  const [currentView, setCurrentView] = useState('catalog'); // 'catalog', 'about', 'cart', 'checkout', 'profile', 'admin', 'login'
   const [toasts, setToasts] = useState([]);
 
-  // Get Redux states
-  const userRole = useSelector(state => state.user.role);
+  // Get Redux auth states
+  const { isAuthenticated, user: currentUser } = useSelector(state => state.auth);
+  const userRole = currentUser?.role || 'customer';
   const cartItems = useSelector(state => state.cart.items);
   const totalItemsCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+  // Load catalog and check authentication session on mount
+  useEffect(() => {
+    dispatch(fetchCurrentUser());
+    dispatch(fetchPlants());
+  }, [dispatch]);
+
+  // Load orders and user profile when logged in
+  useEffect(() => {
+    if (isAuthenticated) {
+      dispatch(fetchOrders());
+      dispatch(fetchUserProfile());
+    }
+  }, [isAuthenticated, dispatch]);
+
+  // Protect routes from unauthenticated users
+  useEffect(() => {
+    if (!isAuthenticated && ['checkout', 'profile', 'admin'].includes(currentView)) {
+      setCurrentView('login');
+    }
+  }, [isAuthenticated, currentView]);
 
   // Toast Notification Helper
   const showToast = (message) => {
@@ -37,17 +63,6 @@ function App() {
     setShowProductList(true);
     setCurrentView('catalog');
     showToast("Welcome to Paradise Nursery!");
-  };
-
-  const handleRoleChange = (role) => {
-    dispatch(setRole(role));
-    if (role === 'admin') {
-      setCurrentView('admin');
-      showToast("Switched to Merchant Admin mode.");
-    } else {
-      setCurrentView('catalog');
-      showToast("Switched to Customer Buyer mode.");
-    }
   };
 
   return (
@@ -123,20 +138,30 @@ function App() {
                 )}
               </div>
 
-              {/* Role Switcher Widget */}
-              <div className="role-simulator-widget" title="Switch view modes to test the app">
-                <button 
-                  className={`role-sim-btn ${userRole === 'customer' ? 'active' : ''}`}
-                  onClick={() => handleRoleChange('customer')}
-                >
-                  Customer
-                </button>
-                <button 
-                  className={`role-sim-btn ${userRole === 'admin' ? 'active' : ''}`}
-                  onClick={() => handleRoleChange('admin')}
-                >
-                  Admin
-                </button>
+              {/* Auth Controls in Navbar */}
+              <div className="auth-navbar-widget">
+                {isAuthenticated ? (
+                  <div className="user-nav-info">
+                    <span className="user-nav-name">👤 {currentUser?.name || 'User'}</span>
+                    <button 
+                      className="logout-btn"
+                      onClick={() => {
+                        dispatch(logoutUser());
+                        setCurrentView('catalog');
+                        showToast("Signed out successfully.");
+                      }}
+                    >
+                      Logout
+                    </button>
+                  </div>
+                ) : (
+                  <button 
+                    className="login-nav-btn"
+                    onClick={() => setCurrentView('login')}
+                  >
+                    Sign In
+                  </button>
+                )}
               </div>
 
               {/* Cart Icon (Customer view only) */}
@@ -190,6 +215,16 @@ function App() {
 
             {currentView === 'admin' && (
               <AdminDashboard />
+            )}
+
+            {currentView === 'login' && (
+              <Login 
+                onLoginSuccess={() => {
+                  const role = currentUser?.role || 'customer';
+                  setCurrentView(role === 'admin' ? 'admin' : 'catalog');
+                  showToast("Signed in successfully!");
+                }}
+              />
             )}
           </div>
 

@@ -1,45 +1,92 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const loadInitialOrders = () => {
-  try {
-    const savedOrders = localStorage.getItem('ep_orders');
-    return savedOrders ? JSON.parse(savedOrders) : [];
-  } catch (error) {
-    console.error('Failed to load orders from localStorage:', error);
-    return [];
-  }
-};
+// Async thunks
+export const fetchOrders = createAsyncThunk('orders/fetchOrders', async (_, { getState }) => {
+  const token = getState().auth.token || localStorage.getItem('ep_auth_token');
+  const response = await fetch('/api/orders', {
+    headers: { 'Authorization': `Bearer ${token}` }
+  });
+  if (!response.ok) throw new Error('Failed to fetch orders');
+  return await response.json();
+});
+
+export const placeOrder = createAsyncThunk('orders/placeOrder', async (orderData, { getState }) => {
+  const token = getState().auth.token || localStorage.getItem('ep_auth_token');
+  const response = await fetch('/api/orders', {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify(orderData)
+  });
+  if (!response.ok) throw new Error('Failed to place order');
+  return await response.json();
+});
+
+export const updateOrderStatus = createAsyncThunk('orders/updateOrderStatus', async ({ orderId, status }, { getState }) => {
+  const token = getState().auth.token || localStorage.getItem('ep_auth_token');
+  const response = await fetch(`/api/orders/${orderId}`, {
+    method: 'PUT',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify({ status })
+  });
+  if (!response.ok) throw new Error('Failed to update order status');
+  return await response.json();
+});
+
+export const deleteOrder = createAsyncThunk('orders/deleteOrder', async (orderId, { getState }) => {
+  const token = getState().auth.token || localStorage.getItem('ep_auth_token');
+  const response = await fetch(`/api/orders/${orderId}`, {
+    method: 'DELETE',
+    headers: { 'Authorization': `Bearer ${token}` }
+  });
+  if (!response.ok) throw new Error('Failed to delete order');
+  const data = await response.json();
+  return data.id; // Return the deleted order id
+});
 
 const orderSlice = createSlice({
   name: 'orders',
   initialState: {
-    items: loadInitialOrders(),
+    items: [],
+    status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
+    error: null
   },
-  reducers: {
-    placeOrder: (state, action) => {
-      const newOrder = {
-        ...action.payload,
-        id: `EP-ORD-${Math.floor(100000 + Math.random() * 900000)}`,
-        date: new Date().toISOString(),
-        status: 'Pending',
-      };
-      state.items.unshift(newOrder); // Add new orders to the beginning
-      localStorage.setItem('ep_orders', JSON.stringify(state.items));
-    },
-    updateOrderStatus: (state, action) => {
-      const { orderId, status } = action.payload;
-      const order = state.items.find(item => item.id === orderId);
-      if (order) {
-        order.status = status;
-        localStorage.setItem('ep_orders', JSON.stringify(state.items));
-      }
-    },
-    deleteOrder: (state, action) => {
-      state.items = state.items.filter(item => item.id !== action.payload);
-      localStorage.setItem('ep_orders', JSON.stringify(state.items));
-    }
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      // Fetch orders
+      .addCase(fetchOrders.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchOrders.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.items = action.payload;
+      })
+      .addCase(fetchOrders.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      })
+      // Place order
+      .addCase(placeOrder.fulfilled, (state, action) => {
+        state.items.unshift(action.payload); // Add new orders to the beginning
+      })
+      // Update order status
+      .addCase(updateOrderStatus.fulfilled, (state, action) => {
+        const index = state.items.findIndex(item => item.id === action.payload.id);
+        if (index !== -1) {
+          state.items[index] = action.payload;
+        }
+      })
+      // Delete order
+      .addCase(deleteOrder.fulfilled, (state, action) => {
+        state.items = state.items.filter(item => item.id !== action.payload);
+      });
   }
 });
 
-export const { placeOrder, updateOrderStatus, deleteOrder } = orderSlice.actions;
 export default orderSlice.reducer;

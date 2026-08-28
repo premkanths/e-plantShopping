@@ -1,67 +1,103 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const DEFAULT_USER = {
-  name: 'Jane Doe',
-  email: 'jane.doe@example.com',
-  shippingAddress: {
-    street: '123 Forest Avenue',
-    city: 'Greenwood',
-    state: 'CO',
-    zip: '80111'
-  },
-  savedCard: {
-    number: '•••• •••• •••• 4242',
-    expiry: '12/28',
-    cvv: '•••'
-  }
-};
+// Async thunks
+export const fetchUserProfile = createAsyncThunk('user/fetchUserProfile', async (_, { getState }) => {
+  const token = getState().auth.token || localStorage.getItem('ep_auth_token');
+  const response = await fetch('/api/user', {
+    headers: { 'Authorization': `Bearer ${token}` }
+  });
+  if (!response.ok) throw new Error('Failed to fetch user profile');
+  return await response.json();
+});
 
-const loadInitialUser = () => {
-  try {
-    const savedUser = localStorage.getItem('ep_user_profile');
-    return savedUser ? JSON.parse(savedUser) : DEFAULT_USER;
-  } catch (error) {
-    console.error('Failed to load user profile:', error);
-    return DEFAULT_USER;
-  }
-};
+export const updateProfile = createAsyncThunk('user/updateProfile', async (profileData, { getState }) => {
+  const token = getState().auth.token || localStorage.getItem('ep_auth_token');
+  const response = await fetch('/api/user', {
+    method: 'PUT',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify(profileData)
+  });
+  if (!response.ok) throw new Error('Failed to update user profile');
+  return await response.json();
+});
 
-const loadInitialWishlist = () => {
-  try {
-    const savedWishlist = localStorage.getItem('ep_user_wishlist');
-    return savedWishlist ? JSON.parse(savedWishlist) : [];
-  } catch (error) {
-    console.error('Failed to load wishlist:', error);
-    return [];
-  }
-};
+export const toggleWishlist = createAsyncThunk('user/toggleWishlist', async (plantName, { getState }) => {
+  const token = getState().auth.token || localStorage.getItem('ep_auth_token');
+  const response = await fetch('/api/user/wishlist', {
+    method: 'PUT',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify({ plantName })
+  });
+  if (!response.ok) throw new Error('Failed to toggle wishlist');
+  return await response.json(); // returns updated wishlist array
+});
+
+export const setRole = createAsyncThunk('user/setRole', async (role, { getState }) => {
+  const token = getState().auth.token || localStorage.getItem('ep_auth_token');
+  const response = await fetch('/api/user', {
+    method: 'PUT',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify({ role })
+  });
+  if (!response.ok) throw new Error('Failed to set role');
+  return await response.json(); // returns updated profile
+});
 
 const userSlice = createSlice({
   name: 'user',
   initialState: {
-    profile: loadInitialUser(),
-    wishlist: loadInitialWishlist(),
-    role: 'customer' // 'customer' or 'admin'
+    profile: {
+      name: '',
+      email: '',
+      shippingAddress: { street: '', city: '', state: '', zip: '' },
+      savedCard: { number: '', expiry: '', cvv: '' }
+    },
+    wishlist: [],
+    role: 'customer',
+    status: 'idle',
+    error: null
   },
-  reducers: {
-    updateProfile: (state, action) => {
-      state.profile = { ...state.profile, ...action.payload };
-      localStorage.setItem('ep_user_profile', JSON.stringify(state.profile));
-    },
-    toggleWishlist: (state, action) => {
-      const plantName = action.payload;
-      if (state.wishlist.includes(plantName)) {
-        state.wishlist = state.wishlist.filter(name => name !== plantName);
-      } else {
-        state.wishlist.push(plantName);
-      }
-      localStorage.setItem('ep_user_wishlist', JSON.stringify(state.wishlist));
-    },
-    setRole: (state, action) => {
-      state.role = action.payload; // toggle user roles (customer or admin)
-    }
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      // Fetch profile
+      .addCase(fetchUserProfile.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchUserProfile.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.profile = action.payload;
+        state.wishlist = action.payload.wishlist || [];
+        state.role = action.payload.role || 'customer';
+      })
+      .addCase(fetchUserProfile.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      })
+      // Update profile
+      .addCase(updateProfile.fulfilled, (state, action) => {
+        state.profile = action.payload;
+        state.role = action.payload.role;
+      })
+      // Toggle wishlist
+      .addCase(toggleWishlist.fulfilled, (state, action) => {
+        state.wishlist = action.payload;
+      })
+      // Set role
+      .addCase(setRole.fulfilled, (state, action) => {
+        state.profile = action.payload;
+        state.role = action.payload.role;
+      });
   }
 });
 
-export const { updateProfile, toggleWishlist, setRole } = userSlice.actions;
 export default userSlice.reducer;
