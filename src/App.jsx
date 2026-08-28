@@ -211,9 +211,9 @@ function App() {
               </div>
               <div className="footer-contact">
                 <h4>Location & Contact</h4>
-                <p>📍 555 Greenery Way, Plant Hills, CO 80211</p>
-                <p>📞 +1 (303) 555-PLNT</p>
-                <p>✉️ hello@paradisenursery.com</p>
+                <p>📍 Bangalore</p>
+                <p>📞 8088113122</p>
+                <p>✉️ premkanthks@gmail.com</p>
               </div>
             </div>
             <div className="footer-bottom">

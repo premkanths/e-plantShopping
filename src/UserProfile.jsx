@@ -327,8 +327,9 @@ function UserProfile({ onContinueShopping }) {
                   <h3>Sold By</h3>
                   <p>
                     <strong>Paradise Nursery Shop</strong><br />
-                    555 Greenery Way<br />
-                    Plant Hills, CO 80211
+                    Bangalore<br />
+                    Phone: 8088113122<br />
+                    premkanthks@gmail.com
                   </p>
                 </div>
               </div>
