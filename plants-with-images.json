@@ -1,0 +1,514 @@
+[
+  {
+    "name": "Snake Plant",
+    "category": "Indoor Plants",
+    "price": 15,
+    "description": "A hardy, upright plant with stiff sword-like leaves. Tolerates low light and infrequent watering, great for beginners.",
+    "wikiTitle": "Sansevieria trifasciata",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Snake_Plant_%28Sansevieria_trifasciata_%27Laurentii%27%29.jpg/3840px-Snake_Plant_%28Sansevieria_trifasciata_%27Laurentii%27%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "name": "Spider Plant",
+    "category": "Indoor Plants",
+    "price": 12,
+    "description": "Produces long arching leaves and baby plantlets on runners. Easy to grow and purifies indoor air.",
+    "wikiTitle": "Chlorophytum comosum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Hierbabuena_0611_Revised.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Peace Lily",
+    "category": "Indoor Plants",
+    "price": 18,
+    "description": "Glossy dark green leaves with elegant white flowers. Thrives in low light and signals thirst by drooping.",
+    "wikiTitle": "Spathiphyllum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Spathiphyllum_cochlearispathum_RTBG.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Boston Fern",
+    "category": "Indoor Plants",
+    "price": 16,
+    "description": "A lush, feathery fern that loves humidity. Adds a soft, tropical feel to any room.",
+    "wikiTitle": "Nephrolepis exaltata",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Boston_Fern_%282873392811%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "ZZ Plant",
+    "category": "Indoor Plants",
+    "price": 19,
+    "description": "Waxy, dark green leaves on a plant that survives weeks without water. Nearly indestructible.",
+    "wikiTitle": "Zamioculcas zamiifolia",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Zamioculcas_zamiifolia_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Golden Pothos",
+    "category": "Indoor Plants",
+    "price": 13,
+    "description": "A trailing vine with heart-shaped leaves splashed with gold. Grows fast in almost any light.",
+    "wikiTitle": "Epipremnum aureum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Money_Plant_%28Epipremnum_aureum%29_4.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Areca Palm",
+    "category": "Indoor Plants",
+    "price": 28,
+    "description": "Feathery fronds that give a breezy, tropical look indoors. Prefers bright, indirect light.",
+    "wikiTitle": "Dypsis lutescens",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/%E6%95%A3%E5%B0%BE%E8%91%B5Dypsis_lutescens_20210511145013_05.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Rubber Plant",
+    "category": "Indoor Plants",
+    "price": 22,
+    "description": "Large, glossy burgundy-green leaves on a sturdy stem. Grows into an impressive floor plant.",
+    "wikiTitle": "Ficus elastica",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Ficus_elastica_leaves_02.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Boxwood",
+    "category": "Outdoor Plants",
+    "price": 24,
+    "description": "Dense evergreen shrub popular for hedges and topiary. Handles shaping and shade well.",
+    "wikiTitle": "Buxus",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Buxus_sempervirens.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Hydrangea",
+    "category": "Outdoor Plants",
+    "price": 26,
+    "description": "Large, showy flower clusters that can change color with soil pH. A classic garden shrub.",
+    "wikiTitle": "Hydrangea",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Hydrangea_arborescens_139866012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Rose Bush",
+    "category": "Outdoor Plants",
+    "price": 20,
+    "description": "Classic flowering shrub with fragrant blooms in many colors. Needs full sun and regular pruning.",
+    "wikiTitle": "Rose",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Rosa_rubiginosa_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Marigold",
+    "category": "Outdoor Plants",
+    "price": 6,
+    "description": "Bright orange and yellow blooms that are easy to grow and help repel garden pests.",
+    "wikiTitle": "Tagetes",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Tagetes_erecta_chendumalli_chedi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Sunflower",
+    "category": "Outdoor Plants",
+    "price": 7,
+    "description": "Tall stems topped with large golden flower heads that track the sun across the sky.",
+    "wikiTitle": "Helianthus annuus",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_sky_backdrop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "English Lavender",
+    "category": "Outdoor Plants",
+    "price": 15,
+    "description": "Fragrant purple flower spikes on silvery foliage. Drought-tolerant and attracts pollinators.",
+    "wikiTitle": "Lavandula angustifolia",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Lavandula_angustifolia_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-087.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Hosta",
+    "category": "Outdoor Plants",
+    "price": 14,
+    "description": "Shade-loving perennial grown for its broad, textured leaves rather than flowers.",
+    "wikiTitle": "Hosta",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Hosta_Bressingham_Blue.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Japanese Maple",
+    "category": "Outdoor Plants",
+    "price": 55,
+    "description": "Ornamental tree prized for its delicate, deeply lobed leaves that turn brilliant red in autumn.",
+    "wikiTitle": "Acer palmatum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Acer_palmatum0.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Moth Orchid",
+    "category": "Flowering Plants",
+    "price": 32,
+    "description": "Elegant arching stems of long-lasting flowers in white, pink, or purple shades.",
+    "wikiTitle": "Phalaenopsis",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Phalaenopsis_philippinensis_NationalOrchidGarden-Singapore.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Tropical Hibiscus",
+    "category": "Flowering Plants",
+    "price": 22,
+    "description": "Large, trumpet-shaped flowers that bloom for a day but keep coming all season.",
+    "wikiTitle": "Hibiscus rosa-sinensis",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Hibiscus_Brilliant.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Bird of Paradise",
+    "category": "Flowering Plants",
+    "price": 38,
+    "description": "Bold banana-like leaves and striking orange-blue flowers resembling a bird in flight.",
+    "wikiTitle": "Strelitzia reginae",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ave-do-para%C3%ADso%2C_Strelitzia_reginae%2C_em_Bag%C3%A9%2C_Rio_Grande_do_Sul%2C_Brasil_-_55211233712.jpg/1920px-Ave-do-para%C3%ADso%2C_Strelitzia_reginae%2C_em_Bag%C3%A9%2C_Rio_Grande_do_Sul%2C_Brasil_-_55211233712.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "name": "African Violet",
+    "category": "Flowering Plants",
+    "price": 14,
+    "description": "Compact plant with fuzzy leaves and clusters of purple, pink, or white flowers. Blooms year-round indoors.",
+    "wikiTitle": "Saintpaulia",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Saintpaulia_ionantha.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Amaryllis",
+    "category": "Flowering Plants",
+    "price": 28,
+    "description": "Grows from a bulb into a tall stalk topped with enormous trumpet-shaped flowers.",
+    "wikiTitle": "Hippeastrum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Hippeastrum_reginae.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Bougainvillea",
+    "category": "Flowering Plants",
+    "price": 25,
+    "description": "Vigorous vine covered in vivid papery bracts in pink, purple, or orange. Loves full sun.",
+    "wikiTitle": "Bougainvillea",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bougainvillea_closeup.jpg/3840px-Bougainvillea_closeup.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "name": "Petunia",
+    "category": "Flowering Plants",
+    "price": 8,
+    "description": "Trumpet-shaped flowers in a rainbow of colors, perfect for pots and hanging baskets.",
+    "wikiTitle": "Petunia",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Pet%C3%BAnia_%28do_tupi_petyma%2C_%27tabaco%27%29.jpg/1920px-Pet%C3%BAnia_%28do_tupi_petyma%2C_%27tabaco%27%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "name": "Camellia",
+    "category": "Flowering Plants",
+    "price": 30,
+    "description": "Glossy evergreen shrub with rose-like blooms that flower in cooler months.",
+    "wikiTitle": "Camellia",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Camellia_sasanqua1JAM343.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Mexican Snowball",
+    "category": "Succulents and Cacti",
+    "price": 9,
+    "description": "Rosette-forming succulent with pale blue-white leaves. Extremely low maintenance.",
+    "wikiTitle": "Echeveria elegans",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Echeveria_elegans_-_1.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "String of Pearls",
+    "category": "Succulents and Cacti",
+    "price": 15,
+    "description": "Trailing succulent with tiny bead-like leaves that cascade over pot edges.",
+    "wikiTitle": "Curio rowleyanus",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Senecio_rowleyanus_leaves.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Aloe Vera",
+    "category": "Succulents and Cacti",
+    "price": 14,
+    "description": "Thick, spiky leaves filled with soothing gel, useful for minor burns and skin care.",
+    "wikiTitle": "Aloe vera",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Aloe_vera_flower_inset.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Golden Barrel Cactus",
+    "category": "Succulents and Cacti",
+    "price": 18,
+    "description": "Round, ribbed cactus covered in golden spines. A striking desert statement piece.",
+    "wikiTitle": "Echinocactus grusonii",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/25/Echinocactus_grusonii_%28aka%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Jade Plant",
+    "category": "Succulents and Cacti",
+    "price": 16,
+    "description": "Thick, glossy oval leaves on woody stems. Said to bring good luck; very easy to care for.",
+    "wikiTitle": "Crassula ovata",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Crassula_ovata_700.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Zebra Haworthia",
+    "category": "Succulents and Cacti",
+    "price": 10,
+    "description": "Small rosette succulent with white striped bumps on dark green leaves.",
+    "wikiTitle": "Haworthiopsis fasciata",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/1_Haworthia_fasciata_-MBB_Kabeljouws_River.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Burro's Tail",
+    "category": "Succulents and Cacti",
+    "price": 16,
+    "description": "Trailing succulent with plump, teardrop-shaped leaves that resemble a braided tail.",
+    "wikiTitle": "Sedum morganianum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Donkey%27s_tail_in_bloom_March_06.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Bunny Ears Cactus",
+    "category": "Succulents and Cacti",
+    "price": 14,
+    "description": "Flat, paddle-shaped pads covered in tiny bristles, growing in a rabbit-ear pattern.",
+    "wikiTitle": "Opuntia microdasys",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Opuntia_microdasys_3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Sweet Basil",
+    "category": "Herbs and Medicinal Plants",
+    "price": 6,
+    "description": "Fragrant culinary herb with tender green leaves, essential for pesto and Italian cooking.",
+    "wikiTitle": "Basil",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Ocimum_basilicum_8zz.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Peppermint",
+    "category": "Herbs and Medicinal Plants",
+    "price": 7,
+    "description": "Fast-spreading aromatic herb used in teas, remedies, and cooking for its cooling flavor.",
+    "wikiTitle": "Peppermint",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Pfefferminze_natur_peppermint.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Rosemary",
+    "category": "Herbs and Medicinal Plants",
+    "price": 9,
+    "description": "Woody, needle-leafed herb with a piney aroma, popular in roasted dishes and traditional remedies.",
+    "wikiTitle": "Rosmarinus officinalis",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Rosemary_in_bloom.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Ashwagandha",
+    "category": "Herbs and Medicinal Plants",
+    "price": 11,
+    "description": "A medicinal shrub used in Ayurvedic medicine, valued for its adaptogenic roots.",
+    "wikiTitle": "Withania somnifera",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/WithaniaFruit.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Chamomile",
+    "category": "Herbs and Medicinal Plants",
+    "price": 8,
+    "description": "Daisy-like flowers dried for a calming, apple-scented herbal tea.",
+    "wikiTitle": "Matricaria chamomilla",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Matricaria_February_2008-1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Thyme",
+    "category": "Herbs and Medicinal Plants",
+    "price": 6,
+    "description": "Low, wiry herb with tiny aromatic leaves, a staple seasoning in many cuisines.",
+    "wikiTitle": "Thyme",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Thyme-Bundle.jpg/3840px-Thyme-Bundle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "name": "Lemongrass",
+    "category": "Herbs and Medicinal Plants",
+    "price": 8,
+    "description": "Tall, citrus-scented grass used in teas and Southeast Asian cooking.",
+    "wikiTitle": "Cymbopogon citratus",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gardenology.org-IMG_2892_rbgs11jan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Holy Basil (Tulsi)",
+    "category": "Herbs and Medicinal Plants",
+    "price": 7,
+    "description": "Sacred herb in Indian tradition, brewed as tea and used for its purported immune benefits.",
+    "wikiTitle": "Ocimum tenuiflorum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Tulsi_or_Tulasi_Holy_basil.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Juniper Bonsai",
+    "category": "Bonsai",
+    "price": 45,
+    "description": "A classic evergreen bonsai with dense, scale-like foliage, ideal for wiring into dramatic shapes.",
+    "wikiTitle": "Juniperus procumbens",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Juniperus_procumbens_nana_MN_2007.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Ficus Bonsai",
+    "category": "Bonsai",
+    "price": 40,
+    "description": "A forgiving, indoor-friendly bonsai with small glossy leaves and thick aerial roots.",
+    "wikiTitle": "Ficus microcarpa",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ficus_microcarpa_-_La_Gomera_01.jpg/3840px-Ficus_microcarpa_-_La_Gomera_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "name": "Chinese Elm Bonsai",
+    "category": "Bonsai",
+    "price": 48,
+    "description": "A popular beginner bonsai with fine branching and small serrated leaves.",
+    "wikiTitle": "Ulmus parvifolia",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/RN_Ulmus_parvifolia_%28Hilversum%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Jade Bonsai",
+    "category": "Bonsai",
+    "price": 35,
+    "description": "A thick-trunked succulent bonsai style, very tolerant of neglect and low humidity.",
+    "wikiTitle": "Crassula ovata",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Crassula_ovata_700.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Japanese Maple Bonsai",
+    "category": "Bonsai",
+    "price": 60,
+    "description": "Delicate, deeply cut leaves that turn brilliant red and orange in autumn.",
+    "wikiTitle": "Acer palmatum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Acer_palmatum0.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Pine Bonsai",
+    "category": "Bonsai",
+    "price": 55,
+    "description": "A traditional bonsai species with long needles, prized for its rugged, aged appearance.",
+    "wikiTitle": "Pinus thunbergii",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Pinus_thunbergii_Izu_Oshima.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Bougainvillea Bonsai",
+    "category": "Bonsai",
+    "price": 42,
+    "description": "A flowering bonsai that produces vivid papery bracts when given plenty of sun.",
+    "wikiTitle": "Bougainvillea",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bougainvillea_closeup.jpg/3840px-Bougainvillea_closeup.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "name": "Azalea Bonsai",
+    "category": "Bonsai",
+    "price": 50,
+    "description": "A flowering bonsai covered in vibrant blooms each spring, popular for display shows.",
+    "wikiTitle": "Rhododendron",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Alpenroos.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "String of Hearts",
+    "category": "Hanging Plants",
+    "price": 18,
+    "description": "Delicate trailing vine with heart-shaped, marbled leaves on thin wiry stems.",
+    "wikiTitle": "Ceropegia woodii",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Ceropegia_linearis_subsp_woodii.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Hanging Pothos",
+    "category": "Hanging Plants",
+    "price": 14,
+    "description": "A trailing vine version of the classic pothos, perfect for shelves and hanging baskets.",
+    "wikiTitle": "Epipremnum aureum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Money_Plant_%28Epipremnum_aureum%29_4.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "English Ivy",
+    "category": "Hanging Plants",
+    "price": 14,
+    "description": "Fast-growing trailing vine with lobed leaves, often grown in hanging pots or as ground cover.",
+    "wikiTitle": "Hedera helix",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hedera_helix_Dover.jpg/3840px-Hedera_helix_Dover.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "name": "Trailing Spider Plant",
+    "category": "Hanging Plants",
+    "price": 13,
+    "description": "Arching leaves and cascading plantlets make this a natural fit for a hanging basket.",
+    "wikiTitle": "Chlorophytum comosum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Hierbabuena_0611_Revised.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Hanging Burro's Tail",
+    "category": "Hanging Plants",
+    "price": 17,
+    "description": "Long, trailing strands of plump succulent leaves that drape beautifully from a hanging pot.",
+    "wikiTitle": "Sedum morganianum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Donkey%27s_tail_in_bloom_March_06.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Hanging Boston Fern",
+    "category": "Hanging Plants",
+    "price": 18,
+    "description": "Full, feathery fronds that spill gracefully over the sides of a hanging planter.",
+    "wikiTitle": "Nephrolepis exaltata",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Boston_Fern_%282873392811%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Philodendron Micans",
+    "category": "Hanging Plants",
+    "price": 20,
+    "description": "Velvety, heart-shaped leaves with a shimmering bronze-green sheen on trailing stems.",
+    "wikiTitle": "Philodendron hederaceum",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Philodendron_scandens_subsp_oxycardium2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Dischidia Million Hearts",
+    "category": "Hanging Plants",
+    "price": 19,
+    "description": "Tiny round succulent-like leaves densely packed along thin trailing stems.",
+    "wikiTitle": "Dischidia ruscifolia",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/%E7%99%BE%E8%90%AC%E5%BF%83_Dischidia_ruscifolia_-%E9%A6%99%E6%B8%AF%E5%8B%95%E6%A4%8D%E7%89%A9%E5%85%AC%E5%9C%92_Hong_Kong_Botanical_Garden-_%289240152650%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Terracotta Pot (8-inch)",
+    "category": "Gardening Accessories",
+    "price": 10,
+    "description": "Classic breathable clay pot that helps prevent overwatering. Fits most medium plants.",
+    "wikiTitle": "Flower pot",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/%22Meillandine%22_Rose_in_clay_pot.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Copper Watering Can",
+    "category": "Gardening Accessories",
+    "price": 22,
+    "description": "A long-spout watering can for precise, gentle watering of indoor and patio plants.",
+    "wikiTitle": "Watering can",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/MetalwateringcansDec08.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Garden Trowel",
+    "category": "Gardening Accessories",
+    "price": 8,
+    "description": "A hand-held digging tool for potting, transplanting, and weeding.",
+    "wikiTitle": "Trowel",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Masons_trowel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Pruning Shears",
+    "category": "Gardening Accessories",
+    "price": 15,
+    "description": "Sharp bypass shears for clean cuts when trimming stems, leaves, and small branches.",
+    "wikiTitle": "Pruning shears",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Secateur_ouvert.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Organic Plant Fertilizer",
+    "category": "Gardening Accessories",
+    "price": 12,
+    "description": "A balanced, slow-release fertilizer to keep houseplants and garden beds healthy.",
+    "wikiTitle": "Fertilizer",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Manure_spreading_Hlokozi_2007_11_29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "LED Grow Light",
+    "category": "Gardening Accessories",
+    "price": 30,
+    "description": "A compact full-spectrum light that supplements sunlight for low-light indoor plants.",
+    "wikiTitle": "Grow light",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Aspect_Black_20W_Growlight_over_Bonsai.jpg/3840px-Aspect_Black_20W_Growlight_over_Bonsai.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "name": "Plant Mister Spray Bottle",
+    "category": "Gardening Accessories",
+    "price": 7,
+    "description": "A fine-mist spray bottle for raising humidity around ferns and tropical plants.",
+    "wikiTitle": "Spray bottle",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Action_photo_of_nasal_spray_on_a_black_background.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  {
+    "name": "Gardening Gloves",
+    "category": "Gardening Accessories",
+    "price": 9,
+    "description": "Durable, breathable gloves that protect hands while potting, pruning, and weeding.",
+    "wikiTitle": "Glove",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Centre_de_Documentaci%C3%B3_Museu_T%C3%A8xtil_de_Terrassa-_Reserves-_Teixits-_Guants002.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  }
+]
