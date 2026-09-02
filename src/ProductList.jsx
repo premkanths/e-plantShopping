@@ -72,19 +72,32 @@ function ProductList({ onAddToCartClick }) {
 
       {/* Filter and Search controls bar */}
       <div className="catalogue-filters-bar">
-        {/* Search */}
-        <div className="search-wrapper-co">
-          <svg className="search-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <input 
-            type="text" 
-            className="search-input-co"
-            placeholder="Search plants by name..." 
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
+        <div className="filters-top-row">
+          {/* Search */}
+          <div className="search-wrapper-co">
+            <svg className="search-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="text" 
+              className="search-input-co"
+              placeholder="Search 64 plants by name or description..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+
+          {/* Sorting dropdown */}
+          <div className="sort-wrapper-co">
+            <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
+              <option value="default">Sort: Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Rating: High to Low</option>
+              <option value="alphabetical">Name: A to Z</option>
+            </select>
+          </div>
         </div>
 
         {/* Categories */}
@@ -98,17 +111,6 @@ function ProductList({ onAddToCartClick }) {
               {cat}
             </button>
           ))}
-        </div>
-
-        {/* Sorting dropdown */}
-        <div className="sort-wrapper-co">
-          <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
-            <option value="default">Sort: Featured</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="price-high">Price: High to Low</option>
-            <option value="rating">Rating: High to Low</option>
-            <option value="alphabetical">Name: A to Z</option>
-          </select>
         </div>
       </div>
 

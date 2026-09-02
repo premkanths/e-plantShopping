@@ -16,8 +16,13 @@ import './App.css';
 function App() {
   const dispatch = useDispatch();
   const [showProductList, setShowProductList] = useState(false);
-  const [currentView, setCurrentView] = useState('catalog'); // 'catalog', 'about', 'cart', 'checkout', 'profile', 'admin', 'login'
-  const [toasts, setToasts] = useState([]);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navigateTo = (view) => {
+    setCurrentView(view);
+    setIsMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // Get Redux auth states
   const { isAuthenticated, user: currentUser } = useSelector(state => state.auth);
@@ -98,26 +103,26 @@ function App() {
               </div>
             </div>
 
-            {/* Navigation links based on active role */}
-            <div className="nav-links-wrapper">
+            {/* Navigation links based on active role (Desktop) */}
+            <div className="nav-links-wrapper desktop-nav">
               <div className="nav-links">
                 {userRole === 'customer' ? (
                   <>
                     <span 
                       className={`nav-link-item ${currentView === 'catalog' ? 'active' : ''}`} 
-                      onClick={() => setCurrentView('catalog')}
+                      onClick={() => navigateTo('catalog')}
                     >
                       Shop Plants
                     </span>
                     <span 
                       className={`nav-link-item ${currentView === 'about' ? 'active' : ''}`} 
-                      onClick={() => setCurrentView('about')}
+                      onClick={() => navigateTo('about')}
                     >
                       About Us
                     </span>
                     <span 
                       className={`nav-link-item ${currentView === 'profile' ? 'active' : ''}`} 
-                      onClick={() => setCurrentView('profile')}
+                      onClick={() => navigateTo('profile')}
                     >
                       My Profile
                     </span>
@@ -126,13 +131,13 @@ function App() {
                   <>
                     <span 
                       className={`nav-link-item ${currentView === 'admin' ? 'active' : ''}`} 
-                      onClick={() => setCurrentView('admin')}
+                      onClick={() => navigateTo('admin')}
                     >
                       Dashboard
                     </span>
                     <span 
                       className={`nav-link-item ${currentView === 'catalog' ? 'active' : ''}`} 
-                      onClick={() => setCurrentView('catalog')}
+                      onClick={() => navigateTo('catalog')}
                     >
                       Catalog Preview
                     </span>
@@ -149,7 +154,7 @@ function App() {
                       className="logout-btn"
                       onClick={() => {
                         dispatch(logoutUser());
-                        setCurrentView('catalog');
+                        navigateTo('catalog');
                         showToast("Signed out successfully.");
                       }}
                     >
@@ -159,7 +164,7 @@ function App() {
                 ) : (
                   <button 
                     className="login-nav-btn"
-                    onClick={() => setCurrentView('login')}
+                    onClick={() => navigateTo('login')}
                   >
                     Sign In
                   </button>
@@ -168,7 +173,7 @@ function App() {
 
               {/* Cart Icon (Customer view only) */}
               {userRole === 'customer' && (
-                <div className="cart-icon-container" onClick={() => setCurrentView('cart')}>
+                <div className="cart-icon-container" onClick={() => navigateTo('cart')}>
                   <span className="nav-link-item">
                     <span className="cart-icon">🛒</span>
                     {totalItemsCount > 0 && <span className="cart-badge">{totalItemsCount}</span>}
@@ -176,6 +181,101 @@ function App() {
                 </div>
               )}
             </div>
+
+            {/* Mobile Header Controls (Cart + Hamburger) */}
+            <div className="mobile-header-controls">
+              {userRole === 'customer' && (
+                <div className="cart-icon-container mobile-cart-icon" onClick={() => navigateTo('cart')}>
+                  <span className="nav-link-item">
+                    <span className="cart-icon">🛒</span>
+                    {totalItemsCount > 0 && <span className="cart-badge">{totalItemsCount}</span>}
+                  </span>
+                </div>
+              )}
+              <button 
+                className="mobile-menu-toggle"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label="Toggle navigation menu"
+              >
+                {isMobileMenuOpen ? '✕' : '☰'}
+              </button>
+            </div>
+
+            {/* Mobile Slide-down Navigation Drawer */}
+            {isMobileMenuOpen && (
+              <div className="mobile-nav-drawer animate-fade-in">
+                <div className="mobile-user-status">
+                  {isAuthenticated ? (
+                    <div className="mobile-user-card">
+                      <span>👤 Signed in as <strong>{currentUser?.name || 'User'}</strong> ({userRole})</span>
+                    </div>
+                  ) : (
+                    <button className="mobile-login-btn" onClick={() => navigateTo('login')}>
+                      🔑 Sign In / Register
+                    </button>
+                  )}
+                </div>
+
+                <div className="mobile-nav-links">
+                  {userRole === 'customer' ? (
+                    <>
+                      <button 
+                        className={`mobile-nav-item ${currentView === 'catalog' ? 'active' : ''}`}
+                        onClick={() => navigateTo('catalog')}
+                      >
+                        🌿 Shop 64 Plants
+                      </button>
+                      <button 
+                        className={`mobile-nav-item ${currentView === 'about' ? 'active' : ''}`}
+                        onClick={() => navigateTo('about')}
+                      >
+                        📖 About Our Nursery
+                      </button>
+                      <button 
+                        className={`mobile-nav-item ${currentView === 'profile' ? 'active' : ''}`}
+                        onClick={() => navigateTo('profile')}
+                      >
+                        ❤️ My Profile & Wishlist
+                      </button>
+                      <button 
+                        className={`mobile-nav-item ${currentView === 'cart' ? 'active' : ''}`}
+                        onClick={() => navigateTo('cart')}
+                      >
+                        🛒 Shopping Cart ({totalItemsCount})
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <button 
+                        className={`mobile-nav-item ${currentView === 'admin' ? 'active' : ''}`}
+                        onClick={() => navigateTo('admin')}
+                      >
+                        📊 Merchant Dashboard
+                      </button>
+                      <button 
+                        className={`mobile-nav-item ${currentView === 'catalog' ? 'active' : ''}`}
+                        onClick={() => navigateTo('catalog')}
+                      >
+                        👁️ Live Catalog Preview
+                      </button>
+                    </>
+                  )}
+
+                  {isAuthenticated && (
+                    <button 
+                      className="mobile-logout-btn"
+                      onClick={() => {
+                        dispatch(logoutUser());
+                        navigateTo('catalog');
+                        showToast("Signed out successfully.");
+                      }}
+                    >
+                      🚪 Sign Out
+                    </button>
+                  )}
+                </div>
+              </div>
+            )}
           </nav>
 
           {/* Page Routing */}
