@@ -16,6 +16,8 @@ import './App.css';
 function App() {
   const dispatch = useDispatch();
   const [showProductList, setShowProductList] = useState(false);
+  const [currentView, setCurrentView] = useState('catalog'); // 'catalog', 'about', 'cart', 'checkout', 'profile', 'admin', 'login'
+  const [toasts, setToasts] = useState([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigateTo = (view) => {
