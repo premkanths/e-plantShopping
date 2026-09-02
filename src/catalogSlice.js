@@ -8,7 +8,10 @@ const getInitialCatalog = () => {
     if (saved) {
       const parsed = JSON.parse(saved);
       if (Array.isArray(parsed) && parsed.length >= DEFAULT_PLANTS.length) {
-        return parsed;
+        const hasStalePhoto = parsed.some(p => p.image && p.image.includes('photo-1599599810769-bcde5a160d32'));
+        if (!hasStalePhoto) {
+          return parsed;
+        }
       }
     }
   } catch (e) {

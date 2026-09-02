@@ -17,7 +17,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'snake-plant',
     name: "Snake Plant",
-    image: "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
     description: "Produces oxygen at night, perfect for bedroom air filtration.",
     cost: "$15",
     category: "Air Purifying",
@@ -31,7 +31,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'spider-plant',
     name: "Spider Plant",
-    image: "https://images.unsplash.com/photo-1572656631137-7935297eff55?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
     description: "Highly effective at filtering indoor air toxins and producing baby offsets.",
     cost: "$12",
     category: "Air Purifying",
@@ -45,7 +45,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'peace-lily',
     name: "Peace Lily",
-    image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",
     description: "Stunning white blooms that filter harmful chemicals and signal thirst.",
     cost: "$18",
     category: "Air Purifying",
@@ -59,7 +59,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'boston-fern',
     name: "Boston Fern",
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/04/30/19/52/boston-fern-5114414_1280.jpg",
     description: "Lush, feathery arching fronds that naturally humidify room air.",
     cost: "$16",
     category: "Air Purifying",
@@ -73,7 +73,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'english-ivy',
     name: "English Ivy",
-    image: "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2017/08/07/14/02/ivy-2604169_1280.jpg",
     description: "Cascading evergreen vine with classic variegated star-shaped leaves.",
     cost: "$14",
     category: "Air Purifying",
@@ -87,7 +87,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'areca-palm',
     name: "Areca Palm",
-    image: "https://images.unsplash.com/photo-1598880940371-c756e015fea1?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2016/11/29/03/42/indoor-plants-1867118_1280.jpg",
     description: "Tropical graceful palm fronds that bring a resort feel indoors.",
     cost: "$28",
     category: "Air Purifying",
@@ -101,7 +101,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'rubber-tree',
     name: "Burgundy Rubber Tree",
-    image: "https://images.unsplash.com/photo-1597055181300-e3633a207518?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/02/15/11/49/flower-4850729_1280.jpg",
     description: "Broad, thick glossy deep emerald and burgundy statement foliage.",
     cost: "$22",
     category: "Air Purifying",
@@ -115,7 +115,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'bamboo-palm',
     name: "Bamboo Palm",
-    image: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/03/02/18/43/indoor-plant-3193910_1280.jpg",
     description: "Dense, tall cluster of bamboo-like stems with rich green fronds.",
     cost: "$26",
     category: "Air Purifying",
@@ -129,7 +129,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'dracaena-marginata',
     name: "Dragon Tree (Dracaena)",
-    image: "https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2019/04/10/11/56/dracaena-4116812_1280.jpg",
     description: "Sculptural slender trunk topped with ribbons of red-edged leaves.",
     cost: "$20",
     category: "Air Purifying",
@@ -143,7 +143,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'chinese-evergreen',
     name: "Chinese Evergreen (Aglaonema)",
-    image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/07/18/14/16/aglaonema-5417329_1280.jpg",
     description: "Patterned silver-and-green broad leaves that thrive in offices.",
     cost: "$19",
     category: "Air Purifying",
@@ -161,7 +161,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'lavender',
     name: "French Lavender",
-    image: "https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=600&auto=format&fit=crop",
     description: "Calming sweet botanical scent that reduces stress and improves sleep.",
     cost: "$20",
     category: "Aromatic Fragrant",
@@ -175,7 +175,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'jasmine',
     name: "Star Jasmine",
-    image: "https://images.unsplash.com/photo-1595165651634-b3b4826f4f6e?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1592729645009-b96d1e63d14b?q=80&w=600&auto=format&fit=crop",
     description: "Intensely sweet floral perfume from star-shaped pristine white blossoms.",
     cost: "$22",
     category: "Aromatic Fragrant",
@@ -189,7 +189,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'rosemary',
     name: "Tuscan Rosemary",
-    image: "https://images.unsplash.com/photo-1594313080370-fd83905a0d02?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg",
     description: "Aromatic needle-like foliage with an invigorating pine and herbal fragrance.",
     cost: "$10",
     category: "Aromatic Fragrant",
@@ -203,7 +203,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'sweet-basil',
     name: "Genovese Sweet Basil",
-    image: "https://images.unsplash.com/photo-1618164435735-413d3b066c9a?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2014/04/05/11/40/basil-316616_1280.jpg",
     description: "Classic Italian culinary herb with sweet, spicy anise-clove aroma.",
     cost: "$8",
     category: "Aromatic Fragrant",
@@ -217,7 +217,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'gardenia',
     name: "Gardenia Cape Jasmine",
-    image: "https://images.unsplash.com/photo-1587556930799-8dca6aef3dc5?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2017/07/12/12/23/gardenia-2496839_1280.jpg",
     description: "Velvety white petals with an unforgettable, luxurious floral scent.",
     cost: "$24",
     category: "Aromatic Fragrant",
@@ -231,7 +231,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'peppermint',
     name: "Crisp Peppermint",
-    image: "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2016/01/05/17/51/mint-1123188_1280.jpg",
     description: "Refreshing cooling menthol scent that invigorates focus and alertness.",
     cost: "$9",
     category: "Aromatic Fragrant",
@@ -245,7 +245,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'lemon-balm',
     name: "Lemon Balm",
-    image: "https://images.unsplash.com/photo-1515586000433-a5512c1414e0?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2017/05/29/19/27/lemon-balm-2354673_1280.jpg",
     description: "Bright citrus-mint fragrance released whenever leaves are brushed.",
     cost: "$11",
     category: "Aromatic Fragrant",
@@ -259,7 +259,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'eucalyptus',
     name: "Silver Dollar Eucalyptus",
-    image: "https://images.unsplash.com/photo-1512428813834-c702c7702b78?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2019/09/27/09/48/eucalyptus-4507986_1280.jpg",
     description: "Blue-green rounded leaves with a soothing spa-like balsamic aroma.",
     cost: "$25",
     category: "Aromatic Fragrant",
@@ -273,7 +273,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'arabian-jasmine',
     name: "Mogra (Arabian Jasmine)",
-    image: "https://images.unsplash.com/photo-1606041008023-472dfb5e530f?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2021/07/19/04/36/jasmine-6477123_1280.jpg",
     description: "Heavily scented traditional jasmine used for floral garlands and tea.",
     cost: "$21",
     category: "Aromatic Fragrant",
@@ -287,7 +287,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'scented-geranium',
     name: "Citronella Scented Geranium",
-    image: "https://images.unsplash.com/photo-1508615039623-a25605d2b022?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/05/10/19/47/geranium-3388514_1280.jpg",
     description: "Lobed velvety leaves with a punchy lemon-citronella mosquito-repelling aroma.",
     cost: "$13",
     category: "Aromatic Fragrant",
@@ -305,7 +305,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'aloe-vera',
     name: "Aloe Vera",
-    image: "https://images.unsplash.com/photo-1598880940080-ff9a29891b85?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
     description: "Fleshy serrated spears packed with pure soothing therapeutic gel.",
     cost: "$14",
     category: "Low Maintenance",
@@ -319,7 +319,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'cast-iron-plant',
     name: "Cast Iron Plant",
-    image: "https://images.unsplash.com/photo-1597055181300-e3633a207518?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/09/24/16/12/houseplants-5600122_1280.jpg",
     description: "Indestructible dark green foliage that survives neglect and low light.",
     cost: "$25",
     category: "Low Maintenance",
@@ -333,7 +333,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'zz-plant',
     name: "ZZ Plant (Zamioculcas)",
-    image: "https://images.unsplash.com/photo-1632207691143-643c2a9a9361?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2021/04/21/09/03/zamioculcas-6195821_1280.jpg",
     description: "Glossy mirror-shine leaves that store water in thick underground tubers.",
     cost: "$19",
     category: "Low Maintenance",
@@ -347,7 +347,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'pothos-golden',
     name: "Golden Pothos (Devil's Ivy)",
-    image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/12/10/10/17/pothos-5820061_1280.jpg",
     description: "Fast-growing heart-shaped leaves splashed with gold variegation.",
     cost: "$13",
     category: "Low Maintenance",
@@ -361,7 +361,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'jade-plant',
     name: "Lucky Jade Plant",
-    image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/05/08/17/23/succulent-3383478_1280.jpg",
     description: "Tree-like succulent bonsai featuring plump oval jade-green leaves.",
     cost: "$16",
     category: "Low Maintenance",
@@ -375,7 +375,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'pilea-peperomioides',
     name: "Pilea Peperomioides (UFO Plant)",
-    image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/07/14/09/25/pilea-5403487_1280.jpg",
     description: "Playful round coin-like leaves balanced gracefully on arching stems.",
     cost: "$17",
     category: "Low Maintenance",
@@ -389,7 +389,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'haworthia-fasciata',
     name: "Zebra Haworthia",
-    image: "https://images.unsplash.com/photo-1509587584298-0f3b313a4890?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2019/03/07/12/36/succulent-4040103_1280.jpg",
     description: "Compact rosettes adorned with raised horizontal white pearl stripes.",
     cost: "$10",
     category: "Low Maintenance",
@@ -403,7 +403,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'ponytail-palm',
     name: "Ponytail Palm",
-    image: "https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2019/11/04/07/35/ponytail-palm-4600492_1280.jpg",
     description: "Bulbous elephant-foot base with fountains of slender curly leaves.",
     cost: "$29",
     category: "Low Maintenance",
@@ -417,7 +417,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'sansevieria-moonshine',
     name: "Moonshine Silver Sansevieria",
-    image: "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/05/21/18/44/sansevieria-5202157_1280.jpg",
     description: "Architectural upright broad leaves in a mesmerizing silvery pale mint color.",
     cost: "$21",
     category: "Low Maintenance",
@@ -431,7 +431,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'aglaonema-silver-bay',
     name: "Silver Bay Chinese Evergreen",
-    image: "https://images.unsplash.com/photo-1600411833196-7c1f6b1a8b90?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/04/18/14/02/flower-5059438_1280.jpg",
     description: "Broad luminous silver centers surrounded by deep forest green borders.",
     cost: "$23",
     category: "Low Maintenance",
@@ -449,7 +449,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'echeveria-elegans',
     name: "Mexican Snowball (Echeveria)",
-    image: "https://images.unsplash.com/photo-1520302630591-fd1c66edc19d?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2017/08/07/19/07/succulent-2607147_1280.jpg",
     description: "Geometric rosette succulent with powder-blue fleshy rounded petals.",
     cost: "$9",
     category: "Succulents & Cacti",
@@ -463,7 +463,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'string-of-pearls',
     name: "String of Pearls (Senecio)",
-    image: "https://images.unsplash.com/photo-1596724806540-3b03698d41fc?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/09/05/11/04/senecio-5546258_1280.jpg",
     description: "Delicate cascading tendrils adorned with sphere-shaped green pea beads.",
     cost: "$15",
     category: "Succulents & Cacti",
@@ -475,9 +475,23 @@ export const DEFAULT_PLANTS = [
     rating: 4.7
   },
   {
+    id: 'fairy-washboard',
+    name: "Fairy Washboard Cactus",
+    image: "https://cdn.pixabay.com/photo/2016/11/21/16/08/cactus-1846147_1280.jpg",
+    description: "Ridged triangular succulent rosettes with deep green textured leaves.",
+    cost: "$11",
+    category: "Succulents & Cacti",
+    sunlight: "Bright Filtered Light",
+    water: "Every 3 weeks",
+    difficulty: "Beginner",
+    size: "5-7 inches tall",
+    benefit: "Hardy architectural desktop succulent that requires minimal care.",
+    rating: 4.5
+  },
+  {
     id: 'burros-tail',
     name: "Burro's Tail (Sedum)",
-    image: "https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/05/04/10/15/sedum-5128637_1280.jpg",
     description: "Braided heavy cascading stems densely packed with plump teardrop leaves.",
     cost: "$16",
     category: "Succulents & Cacti",
@@ -491,7 +505,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'bunny-ears-cactus',
     name: "Bunny Ears Cactus (Opuntia)",
-    image: "https://images.unsplash.com/photo-1508020963102-c6c723be9764?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/08/29/19/01/cactus-3640523_1280.jpg",
     description: "Pair of pad-like stems dotted with golden glochid tufts looking like rabbit ears.",
     cost: "$14",
     category: "Succulents & Cacti",
@@ -505,7 +519,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'crassula-gollum',
     name: "Gollum Jade Succulent",
-    image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/03/18/15/07/crassula-3237071_1280.jpg",
     description: "Funky tubular leaves with suction-cup tips that blush red in bright sun.",
     cost: "$12",
     category: "Succulents & Cacti",
@@ -519,7 +533,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'moon-cactus',
     name: "Ruby Ball Moon Cactus",
-    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2017/07/28/14/29/cactus-2548827_1280.jpg",
     description: "Vibrant neon-red or hot-pink grafted orb sitting atop a green cactus stem.",
     cost: "$13",
     category: "Succulents & Cacti",
@@ -533,7 +547,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'string-of-hearts',
     name: "String of Hearts (Ceropegia)",
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2021/06/15/12/28/ceropegia-woodii-6338499_1280.jpg",
     description: "Wire-thin purple vines dotted with heart-shaped mottled silver leaves.",
     cost: "$18",
     category: "Succulents & Cacti",
@@ -547,7 +561,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'blue-chalksticks',
     name: "Blue Chalksticks (Senecio)",
-    image: "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2019/08/04/09/44/succulents-4383407_1280.jpg",
     description: "Upright powder-blue succulent fingers that form dense colorful mats.",
     cost: "$10",
     category: "Succulents & Cacti",
@@ -561,7 +575,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'bishops-cap',
     name: "Bishop's Cap (Astrophytum)",
-    image: "https://images.unsplash.com/photo-1509587584298-0f3b313a4890?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2016/09/01/19/53/astrophytum-1637374_1280.jpg",
     description: "Spineless star-shaped cactus resembling a bishop's ceremonial mitre.",
     cost: "$17",
     category: "Succulents & Cacti",
@@ -572,20 +586,6 @@ export const DEFAULT_PLANTS = [
     benefit: "Rare collector cactus that produces silk-yellow daisy flowers.",
     rating: 4.8
   },
-  {
-    id: 'fairy-castle-cactus',
-    name: "Fairy Castle Cactus (Acanthocereus)",
-    image: "https://images.unsplash.com/photo-1508020963102-c6c723be9764?q=80&w=600&auto=format&fit=crop",
-    description: "Multiple tiered ribbed green towers resembling a miniature fairytale castle.",
-    cost: "$15",
-    category: "Succulents & Cacti",
-    sunlight: "Bright Sunlight",
-    water: "Once a month",
-    difficulty: "Beginner",
-    size: "6-10 inches tall",
-    benefit: "Fascinating architectural shape loved by children and collectors.",
-    rating: 4.7
-  },
 
   // ==========================================
   // 5. FLOWERING & EXOTIC (10 Plants)
@@ -593,7 +593,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'phalaenopsis-orchid',
     name: "Royal Moth Orchid (Phalaenopsis)",
-    image: "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2017/03/07/18/04/orchid-2124773_1280.jpg",
     description: "Majestic arching sprays of exotic moth-like long-lasting butterfly blooms.",
     cost: "$32",
     category: "Flowering & Exotic",
@@ -607,7 +607,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'anthurium-red',
     name: "Flamingo Flower (Anthurium Red)",
-    image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2019/04/08/20/46/anthurium-4112959_1280.jpg",
     description: "Glossy lipstick-red heart spathes with contrasting yellow flower spadix.",
     cost: "$27",
     category: "Flowering & Exotic",
@@ -621,7 +621,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'bird-of-paradise',
     name: "Bird of Paradise (Strelitzia)",
-    image: "https://images.unsplash.com/photo-1596724806540-3b03698d41fc?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/04/29/11/59/strelitzia-3359765_1280.jpg",
     description: "Iconic banana-like grand paddle leaves and crane-shaped orange flowers.",
     cost: "$38",
     category: "Flowering & Exotic",
@@ -635,7 +635,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'african-violet',
     name: "African Violet (Saintpaulia)",
-    image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/03/14/19/04/african-violet-3226065_1280.jpg",
     description: "Fuzzy velvet rosettes blooming in cheerful royal purple and violet clusters.",
     cost: "$14",
     category: "Flowering & Exotic",
@@ -649,7 +649,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'guzmania-bromeliad',
     name: "Scarlet Star Bromeliad",
-    image: "https://images.unsplash.com/photo-1512428813834-c702c7702b78?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2016/04/14/17/57/bromeliad-1329388_1280.jpg",
     description: "Vibrant flaming torch of brilliant neon-red and orange flower bracts.",
     cost: "$24",
     category: "Flowering & Exotic",
@@ -663,7 +663,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'christmas-cactus',
     name: "Holiday Schlumbergera Cactus",
-    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2017/12/10/14/47/christmas-cactus-3010078_1280.jpg",
     description: "Jointed arching green leaf pads bursting into fuchsia tiered blossoms in winter.",
     cost: "$16",
     category: "Flowering & Exotic",
@@ -677,7 +677,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'indoor-hibiscus',
     name: "Tropical Hibiscus",
-    image: "https://images.unsplash.com/photo-1550983344-9337c7689cb4?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2016/07/28/09/01/hibiscus-1547372_1280.jpg",
     description: "Huge dinner-plate exotic blooms in fiery red and sunny coral tones.",
     cost: "$22",
     category: "Flowering & Exotic",
@@ -691,7 +691,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'crown-of-thorns',
     name: "Crown of Thorns (Euphorbia)",
-    image: "https://images.unsplash.com/photo-1508615039623-a25605d2b022?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/05/23/16/08/crown-of-thorns-3424458_1280.jpg",
     description: "Spiny stems topped with lush emerald leaves and delicate salmon-pink flowers.",
     cost: "$19",
     category: "Flowering & Exotic",
@@ -705,7 +705,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'kalanchoe-blossfeldiana',
     name: "Flaming Katy (Kalanchoe)",
-    image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/02/09/16/22/kalanchoe-3141933_1280.jpg",
     description: "Dense dome of vibrant cherry-red long-lasting miniature flowers.",
     cost: "$12",
     category: "Flowering & Exotic",
@@ -719,7 +719,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'amaryllis-red-lion',
     name: "Amaryllis Red Lion",
-    image: "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2017/01/06/19/15/amaryllis-1958671_1280.jpg",
     description: "Gigantic velvety crimson trumpet blooms on stately emerald stalks.",
     cost: "$28",
     category: "Flowering & Exotic",
@@ -737,7 +737,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'monstera-deliciosa',
     name: "Monstera Deliciosa (Swiss Cheese Plant)",
-    image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/02/08/17/49/monstera-4830774_1280.jpg",
     description: "Iconic split-leaf tropical climbing plant with dramatic natural fenestrations.",
     cost: "$35",
     category: "Foliage & Ferns",
@@ -751,7 +751,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'fiddle-leaf-fig',
     name: "Fiddle Leaf Fig (Ficus lyrata)",
-    image: "https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/09/24/16/12/ficus-lyrata-5600121_1280.jpg",
     description: "Magnificent violin-shaped leathery leaves that command the room.",
     cost: "$45",
     category: "Foliage & Ferns",
@@ -765,7 +765,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'calathea-medallion',
     name: "Calathea Medallion",
-    image: "https://images.unsplash.com/photo-1600411833196-7c1f6b1a8b90?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2021/04/16/19/20/calathea-6184138_1280.jpg",
     description: "Painterly feathered emerald leaves with rich aubergine-purple undersides.",
     cost: "$24",
     category: "Foliage & Ferns",
@@ -779,7 +779,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'maidenhair-fern',
     name: "Maidenhair Fern (Adiantum)",
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2019/08/08/11/33/fern-4392765_1280.jpg",
     description: "Delicate fan-shaped leaflets clustered on glossy ebony-black stems.",
     cost: "$18",
     category: "Foliage & Ferns",
@@ -793,7 +793,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'stromanthe-triostar',
     name: "Stromanthe Triostar",
-    image: "https://images.unsplash.com/photo-1596724806540-3b03698d41fc?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2021/01/29/08/21/stromanthe-5960093_1280.jpg",
     description: "Exquisite variegated splashes of cream, olive green, and neon magenta-pink.",
     cost: "$26",
     category: "Foliage & Ferns",
@@ -807,7 +807,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'maranta-prayer-plant',
     name: "Red Vein Prayer Plant (Maranta)",
-    image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/04/28/19/26/maranta-5106037_1280.jpg",
     description: "Oval leaves patterned with herringbone neon-red veins and chartreuse centers.",
     cost: "$17",
     category: "Foliage & Ferns",
@@ -821,7 +821,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'staghorn-fern',
     name: "Staghorn Fern (Platycerium)",
-    image: "https://images.unsplash.com/photo-1512428813834-c702c7702b78?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2018/09/14/11/33/staghorn-fern-3676882_1280.jpg",
     description: "Epiphytic antler-shaped fronds that can be mounted as living wall art.",
     cost: "$30",
     category: "Foliage & Ferns",
@@ -835,7 +835,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'philodendron-birkin',
     name: "Philodendron Birkin",
-    image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2021/02/20/17/41/philodendron-6034015_1280.jpg",
     description: "Dark emerald heart foliage with crisp pinstripes of creamy white variegation.",
     cost: "$23",
     category: "Foliage & Ferns",
@@ -849,7 +849,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'alocasia-polly',
     name: "Alocasia Amazonica (Polly)",
-    image: "https://images.unsplash.com/photo-1600411833196-7c1f6b1a8b90?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2021/03/09/13/28/alocasia-6081912_1280.jpg",
     description: "Dramatic scalloped arrowhead shield leaves with bold silver-white ribbing.",
     cost: "$27",
     category: "Foliage & Ferns",
@@ -863,7 +863,7 @@ export const DEFAULT_PLANTS = [
   {
     id: 'schefflera-umbrella',
     name: "Variegated Umbrella Tree (Schefflera)",
-    image: "https://images.unsplash.com/photo-1597055181300-e3633a207518?q=80&w=600&auto=format&fit=crop",
+    image: "https://cdn.pixabay.com/photo/2020/08/14/15/34/schefflera-5488273_1280.jpg",
     description: "Umbrella whorls of glossy green and gold leaves on an upright shrubby tree.",
     cost: "$22",
     category: "Foliage & Ferns",
@@ -926,30 +926,26 @@ export async function getDb() {
     );
   `);
 
-  // Seed or update plants table if empty or if fewer than 50
-  const plantCount = await dbConnection.get('SELECT COUNT(*) as count FROM plants');
-  if (plantCount.count < 50) {
-    console.log(`Populating plants catalog with full 60 plant collection (currently ${plantCount.count})...`);
-    for (const plant of DEFAULT_PLANTS) {
-      await dbConnection.run(
-        `INSERT OR REPLACE INTO plants (id, name, image, description, cost, category, sunlight, water, difficulty, size, benefit, rating)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        [
-          plant.id,
-          plant.name,
-          plant.image,
-          plant.description,
-          plant.cost,
-          plant.category,
-          plant.sunlight,
-          plant.water,
-          plant.difficulty,
-          plant.size,
-          plant.benefit,
-          plant.rating
-        ]
-      );
-    }
+  // Update plants in database
+  for (const plant of DEFAULT_PLANTS) {
+    await dbConnection.run(
+      `INSERT OR REPLACE INTO plants (id, name, image, description, cost, category, sunlight, water, difficulty, size, benefit, rating)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        plant.id,
+        plant.name,
+        plant.image,
+        plant.description,
+        plant.cost,
+        plant.category,
+        plant.sunlight,
+        plant.water,
+        plant.difficulty,
+        plant.size,
+        plant.benefit,
+        plant.rating
+      ]
+    );
   }
 
   // Seed users table with Guest Customer and Guest Admin if empty
