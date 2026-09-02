@@ -39,12 +39,14 @@ function App() {
     }
   }, [isAuthenticated, dispatch]);
 
-  // Protect routes from unauthenticated users
+  // Protect routes from unauthenticated users and redirect from login on auth
   useEffect(() => {
     if (!isAuthenticated && ['checkout', 'profile', 'admin'].includes(currentView)) {
       setCurrentView('login');
+    } else if (isAuthenticated && currentView === 'login') {
+      setCurrentView(userRole === 'admin' ? 'admin' : 'catalog');
     }
-  }, [isAuthenticated, currentView]);
+  }, [isAuthenticated, userRole, currentView]);
 
   // Toast Notification Helper
   const showToast = (message) => {
